@@ -1,0 +1,3 @@
+rootProject.name = 'pharmacy-config-exercise1'
+include 'config-server', 'pharmacy-service'
+
