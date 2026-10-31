@@ -13,6 +13,9 @@ Pharmacy Service.
 - Spring Boot 3.5.6, Spring Cloud 2025.0.0, Gradle Wrapper 8.14.3.
 - PostgreSQL có database `pharmacy_db` và tài khoản có quyền kết nối.
 
+Máy đang mặc định dùng JDK 26 cần chọn JDK 21 trước khi chạy Gradle, ví dụ
+trên macOS: `export JAVA_HOME=$(/usr/libexec/java_home -v 21)`.
+
 ## Chạy
 
 Clone hoặc tải repository này, rồi chạy lệnh từ thư mục gốc của repository.
