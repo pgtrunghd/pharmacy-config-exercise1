@@ -4,8 +4,8 @@
 
 Hai ứng dụng Spring Boot dùng cùng một kho Git: Config Server (cổng 8888) đọc
 `pharmacy-service.properties` ở gốc kho, còn Pharmacy Service lấy cấu hình đó
-khi khởi động. Cấu hình PostgreSQL và thông tin chi nhánh không nằm trong mã nguồn
-Pharmacy Service.
+khi khởi động và chạy trên cổng 8081. Cấu hình PostgreSQL và thông tin chi nhánh
+không nằm trong mã nguồn Pharmacy Service.
 
 ## Yêu cầu
 
@@ -35,7 +35,7 @@ Xác nhận Config Server trả dữ liệu từ Git:
 curl -fsS http://localhost:8888/pharmacy-service/default
 ```
 
-JSON phải có `spring.datasource.url`, `app.branch-name`, `app.hotline` trong
+JSON phải có `server.port`, `spring.datasource.url`, `app.branch-name`, `app.hotline` trong
 `propertySources` và `version` là mã commit Git. Có thể dùng `python3 -m json.tool`
 để đọc JSON dễ hơn. Không đưa mật khẩu thật lên Git; giá trị `${DB_PASSWORD}`
 được Pharmacy Service lấy từ biến môi trường của chính nó.
